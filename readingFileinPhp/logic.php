@@ -14,5 +14,13 @@ if(isset($_POST["create&Save"])){
     }
     fclose($file);
 }
+// logic for reading the file
+if(isset($_POST["read"])){
+    if(isset($_POST["fileName"])){
+    $filePath = "files/{$_POST["fileName"]}";
+    $content = file_get_contents($filePath);
+    echo $content;
+}
+}
 
 
